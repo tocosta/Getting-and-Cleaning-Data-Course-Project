@@ -1,4 +1,4 @@
 Getting-and-Cleaning-Data-Course-Project
 ========================================
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.
+Author: Sérgio Costa (https://github.com/sgcosta/Getting-and-Cleaning-Data-Course-Project)
