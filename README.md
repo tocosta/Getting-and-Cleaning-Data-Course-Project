@@ -31,7 +31,7 @@ How to run the Project
 2. Run the R script `run_analysis.r`.
 3. Validate the directory ". / HAR UCI Dataset", e verify if the CSV file, called "tidy-UCI-HAR-AVG-dataset.csv" was created.
 
-Outputs produced
+Outputs Produced
 ----------------
 * Tidy dataset file `tidy-UCI-HAR-AVG-dataset.csv` (tab-delimited text)
 * Codebook file `codebook.md` (Markdown)
