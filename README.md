@@ -26,3 +26,7 @@ Requirements for the Project
 
 How to run the Project
 ----------------------
+
+1. Open the R script `run_analysis.r` (using a text editor).
+2. Run the R script `run_analysis.r`.
+3. Validate the directory ". / HAR UCI Dataset", e verify if the CSV file, called "tidy-UCI-HAR-AVG-dataset.csv" was created.
