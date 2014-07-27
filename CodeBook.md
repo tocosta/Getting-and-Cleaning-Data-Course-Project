@@ -1,6 +1,6 @@
-Codebook
-========
-This is a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data.
+# Codebook
+
+Este é um livro de código que descreve as fontes de dados, os dados, as variáveis ​​e quaisquer transformações ou de trabalho que você executou para limpar os dados. Também descreve como run_analysis.R implementa os passos transformações.
 
 ## CodeBook for Data Sets produced by run_analysis.R
 
@@ -13,7 +13,21 @@ Codebook was generated on 2014-07-27 01:38:12 during the same process that gener
 This dataset is derived from the "Human Activity Recognition Using Smartphones Data Set" which was originally made avaiable here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 * Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-## The data
+## Data Set Information
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data [1].
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain [1]. 
+
+## Attribute Information
+ 
+For each record in the dataset it is provided [1]: 
+* Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
+* Triaxial Angular velocity from the gyroscope. 
+* A 561-feature vector with time and frequency domain variables. 
+* Its activity label. 
+* An identifier of the subject who carried out the experiment.
+
+## The Data
 
 The dataset includes the following files:
 
@@ -37,14 +51,15 @@ File Name             | Description
 There are 5 parts:
 
 1. Merges the training and the test sets to create one data set.
+* The result is a 10299 x 561 data frame, as in the original description ("Number of Instances: 10299" and "Number of Attributes: 561")
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive activity names.
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-* The result is saved as "./tidy-UCI-HAR-AVG-dataset.csv", a 180x68 data frame (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names (see below), and then the averages for each of the 66 attributes are in columns 3...68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages`
+* The result is saved as "./tidy-UCI-HAR-AVG-dataset.csv", a 180x68 data table (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names (see below), and then the averages for each of the 66 attributes are in columns 3...68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages`
 
-## How ```run_analysis.R``` implements the above steps:
+## How `run_analysis.R` implements the above steps:
 
 * Checks if the file exists, otherwise it downloads. 
 * Checks if the file has already been extracted to the directory.
@@ -54,7 +69,7 @@ There are 5 parts:
 * Process the data. 
 * Merge and creates data set
 
-## Data Columns
+## Columns for the tidy set of data
 
 1. **ActivityName**: Activity being performed
 2. **SubjectID**: ID indicating the subject from whom data was collected
@@ -124,3 +139,6 @@ There are 5 parts:
 66. fBodyBodyGyroMagStd
 67. fBodyBodyGyroJerkMagMean
 68. fBodyBodyGyroJerkMagStd
+
+## References
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
