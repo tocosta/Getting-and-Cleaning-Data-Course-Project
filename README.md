@@ -30,8 +30,7 @@ Running the script:
 
 1. Clone this repository;
 2. Change current directory to the UCI HAR Dataset folder;
-3. Open the R script `run_analysis.r`;
-4. Run Rscript <path to>/run_analysis.R;
+3. Open and Run the R script `run_analysis.r`;
 5. The tidy dataset should get created in the current directory: Validate the directory and verify if the CSV file, called `tidy-UCI-HAR-dataset-AVG.csv` was created.
 
 NOTE: The `run_analysis.R` script is commented to indicate which parts of the code are responsible for which transformations. See CodeBook.md for additional information on resulting data sets.
