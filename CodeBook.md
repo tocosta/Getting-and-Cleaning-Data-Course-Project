@@ -64,7 +64,7 @@ File Name             | Description
 > * Extract the mean and standard deviation column names and data;
 > * Process the data;
 > * Merge and creates data set: 
-> * The result is saved as "./tidy-UCI-HAR-AVG-dataset.txt", a 180x68 data table (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names (see below), and then the averages for each of the 66 attributes are in columns 3...68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages.
+> * The result is saved as "./tidy-UCI-HAR-dataset-AVG.txt", a 180x68 data table (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names (see below), and then the averages for each of the 66 attributes are in columns 3...68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages.
 
 ## Columns for the tidy set of data
 
