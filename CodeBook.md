@@ -17,7 +17,7 @@ This dataset is derived from the "Human Activity Recognition Using Smartphones D
 
 The dataset includes the following files:
 
-File name             | Description
+File Name             | Description
 ----------------------|------------
 'README.txt'          |
 'features_info.txt'   | Shows information about the variables used on the feature vector
@@ -32,9 +32,29 @@ File name             | Description
 'train/Inertial Signals/body_acc_x_train.txt' | The body acceleration signal obtained by subtracting the gravity from the total acceleration.
 'train/Inertial Signals/body_gyro_x_train.txt' | The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
+## Transformation Details
+
+There are 5 parts:
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive activity names.
+5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## How ```run_analysis.R``` implements the above steps:
+
+* Checks if the file exists, otherwise it downloads. 
+* Checks if the file has already been extracted to the directory.
+* Load both test and train data.
+* Load the features and activity labels.
+* Extract the mean and standard deviation column names and data.
+* Process the data. 
+* Merge and creates data set.
 
 
-## Variable list and descriptions
+
+## Variable list and Descriptions
 
 Variable name    | Description
 -----------------|------------
