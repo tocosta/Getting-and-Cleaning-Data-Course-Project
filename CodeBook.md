@@ -1,11 +1,19 @@
 Codebook
 ========
+This is a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data.
+
 CodeBook for Data Sets produced by run_analysis.R
 -------------------------------------------------
 
 Author: Sérgio Costa (https://github.com/sgcosta/Getting-and-Cleaning-Data-Course-Project)
 
 Codebook was generated on 2014-07-27 01:38:12 during the same process that generated the dataset. 
+
+Data source
+-----------
+This dataset is derived from the "Human Activity Recognition Using Smartphones Data Set" which was originally made avaiable here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+*Original description of the dataset: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 
 
 Variable list and descriptions
