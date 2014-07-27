@@ -1,10 +1,10 @@
 # Codebook
 
-> Este é um livro de código que descreve as fontes de dados, os dados, as variáveis ​​e quaisquer transformações ou de trabalho que você executou para limpar os dados. Também descreve como run_analysis.R implementa os passos transformações.
+> This book is a code that describes the data sources, data, variables, and any changes or work that you performed to clean the data. Also describes how to implement the steps run_analysis.R transformations.
 
 ## CodeBook for data sets produced by run_analysis.R
 
-> Author: Sérgio Costa (https://github.com/sgcosta/Getting-and-Cleaning-Data-Course-Project)
+> Author: Costa, S. (https://github.com/sgcosta/Getting-and-Cleaning-Data-Course-Project)
 
 > Codebook was generated on 2014-07-27 01:38:12 during the same process that generated the dataset. 
 
