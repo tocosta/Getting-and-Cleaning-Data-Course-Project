@@ -11,11 +11,11 @@
   # Directory
   dirFile <- "./UCI HAR Dataset"
   
-  # Directory and filename (.csv) of the clean/tidy data
-  tidyDataFile <- "./tidy-UCI-HAR-dataset.csv"
-  tidyDataFileAVG <- "./tidy-UCI-HAR-dataset-AVG.csv"
+  # Directory and filename (txt) of the clean/tidy data
+  tidyDataFile <- "./tidy-UCI-HAR-dataset.txt"
+  # tidyDataFileAVG <- "./tidy-UCI-HAR-dataset-AVG.csv"
   # Directory and filename (.txt) of the clean/tidy data
-  # tidyDataFileAVGtxt <- "./tidy-UCI-HAR-AVG-dataset.txt"
+  tidyDataFileAVGtxt <- "./tidy-UCI-HAR-dataset-AVG.txt"
   
   # Download the dataset (. ZIP), which does not exist
   if (file.exists(dataFileZIP) == FALSE) {
@@ -75,11 +75,11 @@
   names(tidyDataAVGSet)[2] <- "Activity"
   
   # Created csv (tidy data set) in diretory
-  write.csv(tidyDataSet, tidyDataFile)
+  write.table(tidyDataSet, tidyDataFile)
   # Created csv (tidy data set AVG) in diretory
-  write.csv(tidyDataAVGSet, tidyDataFileAVG)
+  # write.csv(tidyDataAVGSet, tidyDataFileAVG)
   # Created txt (tidy data set AVG) in diretory
-  # write.table(tidyDataAVGSet, tidyDataFileAVGtxt, sep="\t")
+  write.table(tidyDataAVGSet, tidyDataFileAVGtxt)
 
 ## NOTE: Read the file "Readme.md" and "Codebook.md" to understand the functioning of the "run_analysis.R". 
 ## You can see how it works and how you can validate its operation.
