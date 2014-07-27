@@ -12,9 +12,12 @@
   dirFile <- "./UCI HAR Dataset"
   
   # Directory and filename (.csv) of the clean/tidy data
-  tidyDataFileAVG <- "./tidy-UCI-HAR-AVG-dataset.csv"
+  tidyDataFile <- "./tidy-UCI-HAR-dataset.csv"
+  tidyDataFileAVG <- "./tidy-UCI-HAR-dataset-AVG.csv"
+  # Directory and filename (.txt) of the clean/tidy data
+  # tidyDataFileAVGtxt <- "./tidy-UCI-HAR-AVG-dataset.txt"
   
-  # Download the dataset (.ZIP), which does not exist
+  # Download the dataset (. ZIP), which does not exist
   if (file.exists(dataFileZIP) == FALSE) {
       download.file(fileURL, destfile = dataFileZIP)
     }
@@ -56,8 +59,12 @@
   names(activities) <- c('act_id', 'act_name')
   y[, 1] = activities[y[, 1], 2]
 
+  names(y) <- "Activity"
+  names(s) <- "Subject"
+
   # Combines data table by columns
   tidyDataSet <- cbind(s, y, x)
+
   
   # 5. Creates a 2nd, independent tidy data set with the average of each variable for each activity and each subject:
   p <- tidyDataSet[, 3:dim(tidyDataSet)[2]] 
@@ -67,8 +74,12 @@
   names(tidyDataAVGSet)[1] <- "Subject"
   names(tidyDataAVGSet)[2] <- "Activity"
   
+  # Created csv (tidy data set) in diretory
+  write.csv(tidyDataSet, tidyDataFile)
   # Created csv (tidy data set AVG) in diretory
   write.csv(tidyDataAVGSet, tidyDataFileAVG)
+  # Created txt (tidy data set AVG) in diretory
+  # write.table(tidyDataAVGSet, tidyDataFileAVGtxt, sep="\t")
 
 ## NOTE: Read the file "Readme.md" and "Codebook.md" to understand the functioning of the "run_analysis.R". 
 ## You can see how it works and how you can validate its operation.
