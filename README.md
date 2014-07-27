@@ -24,14 +24,19 @@ Requirements for the Project
 > Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 
-How to run the Project
-----------------------
+## How to run the Project
 
-1. Open the R script `run_analysis.r` (using a text editor).
-2. Run the R script `run_analysis.r`.
-3. Validate the directory ". / HAR UCI Dataset", e verify if the CSV file, called "tidy-UCI-HAR-AVG-dataset.csv" was created.
+Running the script:
 
-Outputs Produced
-----------------
+1. Clone this repository;
+2. Change current directory to the UCI HAR Dataset folder;
+3. Open the R script `run_analysis.r`;
+4. Run Rscript <path to>/run_analysis.R;
+5. The tidy dataset should get created in the current directory: Validate the directory and verify if the CSV file, called `tidy-UCI-HAR-dataset-AVG.csv` was created.
+
+NOTE: The `run_analysis.R` script is commented to indicate which parts of the code are responsible for which transformations. See CodeBook.md for additional information on resulting data sets.
+
+## Outputs Produced
+
 * Tidy dataset file `tidy-UCI-HAR-AVG-dataset.csv` (tab-delimited text)
 * Codebook file `codebook.md` (Markdown)
