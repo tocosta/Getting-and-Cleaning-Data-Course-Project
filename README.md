@@ -1,6 +1,6 @@
 # Getting-and-Cleaning-Data-Course-Project
 
-> Author: Sérgio Costa (https://github.com/sgcosta/Getting-and-Cleaning-Data-Course-Project)
+> Author: Costa, S. (https://github.com/sgcosta/Getting-and-Cleaning-Data-Course-Project)
 
 ## Requirements for the Project
 
