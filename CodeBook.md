@@ -2,23 +2,23 @@
 
 Este é um livro de código que descreve as fontes de dados, os dados, as variáveis ​​e quaisquer transformações ou de trabalho que você executou para limpar os dados. Também descreve como run_analysis.R implementa os passos transformações.
 
-## CodeBook for Data Sets produced by run_analysis.R
+## CodeBook for data sets produced by run_analysis.R
 
 Author: Sérgio Costa (https://github.com/sgcosta/Getting-and-Cleaning-Data-Course-Project)
 
 Codebook was generated on 2014-07-27 01:38:12 during the same process that generated the dataset. 
 
-## Data Source
+## Data source
 
 This dataset is derived from the "Human Activity Recognition Using Smartphones Data Set" which was originally made avaiable here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 * Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-## Data Set Information
+## Data set information
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data [1].
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain [1]. 
 
-## Attribute Information
+## Attribute information
  
 For each record in the dataset it is provided [1]: 
 * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
@@ -27,9 +27,9 @@ For each record in the dataset it is provided [1]:
 * Its activity label. 
 * An identifier of the subject who carried out the experiment.
 
-## The Data
+## The data
 
-The dataset includes the following files:
+The dataset includes the following files [1]:
 
 File Name             | Description
 ----------------------|------------
@@ -46,28 +46,26 @@ File Name             | Description
 'train/Inertial Signals/body_acc_x_train.txt' | The body acceleration signal obtained by subtracting the gravity from the total acceleration.
 'train/Inertial Signals/body_gyro_x_train.txt' | The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
-## Transformation Details
+## Transformation details
 
 There are 5 parts:
 
 1. Merges the training and the test sets to create one data set.
-* The result is a 10299 x 561 data frame, as in the original description ("Number of Instances: 10299" and "Number of Attributes: 561")
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive activity names.
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-* The result is saved as "./tidy-UCI-HAR-AVG-dataset.csv", a 180x68 data table (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names (see below), and then the averages for each of the 66 attributes are in columns 3...68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages`
-
 ## How `run_analysis.R` implements the above steps:
 
-* Checks if the file exists, otherwise it downloads. 
-* Checks if the file has already been extracted to the directory.
-* Load both test and train data.
-* Load the features and activity labels.
-* Extract the mean and standard deviation column names and data.
-* Process the data. 
-* Merge and creates data set
+* Checks if the file exists, otherwise it downloads;
+* Checks if the file has already been extracted to the directory;
+* Load both test and train data;
+* Load the features and activity labels;
+* Extract the mean and standard deviation column names and data;
+* Process the data;
+* Merge and creates data set: 
+* The result is saved as "./tidy-UCI-HAR-AVG-dataset.csv", a 180x68 data table (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names (see below), and then the averages for each of the 66 attributes are in columns 3...68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages.
 
 ## Columns for the tidy set of data
 
